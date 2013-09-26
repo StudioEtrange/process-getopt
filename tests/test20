@@ -1,5 +1,5 @@
 test_body() {
-    (cd ..; PATH=$(pwd):$PATH; ./boilerplate $@)
+    (cd ..; PATH=$(pwd):$PATH; ./doc/examples/boilerplate $@)
     return $?
 }
 

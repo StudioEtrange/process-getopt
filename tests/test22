@@ -29,7 +29,7 @@ Options:
   -h, --help                print this help and exit
   -V, --version             print version and exit
   -v, --verbose             do it verbosely
-  -q, --quiet               do it quietly (negates -v)
+  -q, --quiet               do it quietly
   --                        explicitly ends the options
 EOF
     cat > $TEST_EXP_STDERR <<"EOF"

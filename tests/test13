@@ -34,7 +34,8 @@ test_setup() {
     TEST_EXP_VAL=1
     cat > $TEST_EXP_STDOUT <<"EOF"
 EOF
-    cat > $TEST_EXP_STDERR <<"EOF"
-test_body: option requires an argument -- 'a'
-EOF
+
+    # generate international getopt output
+    $(getopt -n "test_body" -o a: -- "-a" > /dev/null 2> $TEST_EXP_STDERR) || return 0
+   
 }

@@ -23,7 +23,7 @@ check_and_process_opts() {
     done
     [ "$NO_OPTS" ] && return 1
 
-    source ../process-getopt
+    source ../src/process-getopt
 
     STOP_func() { [ "${1:-""}" ] && STOP=; }
     add_opt STOP "don't stop on first error" s "" stop

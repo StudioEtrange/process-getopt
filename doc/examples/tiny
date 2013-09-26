@@ -1,4 +1,4 @@
-#!/bash/bash
+#!/bin/bash
 
 # $Id: tiny,v 1.5 2011/07/15 18:07:13 bhepple Exp $
 
@@ -7,7 +7,9 @@ VERSION='$Revision: 1.5 $'
 USAGE="A tiny example using process-getopt(1)"
 
 # call process-getopt functions to define some options:
-source ../../src/process-getopt || exit 1
+#source ../../src/process-getopt || exit 1
+[[ -f ../../src/process-getopt ]] &&  source ../../src/process-getopt
+[[ -f ./src/process-getopt ]] &&  source ./src/process-getopt
 
 SLOT=""
 SLOT_func()   { [ "${1:-""}" ] && SLOT="yes"; }      # callback for SLOT option
